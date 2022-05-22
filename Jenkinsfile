@@ -32,7 +32,7 @@ node {
     }
 	
 	stage("SonarQube Scan"){
-        withSonarQubeEnv(credentialsId: 'SonarQubeToken') {
+        withSonarQubeEnv(credentialsId: 'SonarQubeCreds') {
 			sh "${sonarscanner}/bin/sonar-scanner"
 		}
     }
